@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./fannkuchredux 12 >>null
-\time -v -o tmp2 wasmedge ./fannkuchredux.so 12 >>null
-\time -v -o tmp3 wasmedge ./fannkuchredux.wasm 12 >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./fannkuchredux.so 12 >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./fannkuchredux.wasm 12 >>null
 \time -v -o tmp4 wasmer ./fannkuchredux.out 12 >>null
 \time -v -o tmp5 wasmtime ./fannkuchredux.out 12 >>null
 \time -v -o tmp6 wasmer run ./fannkuchredux_wasmer_aot 12 >>null

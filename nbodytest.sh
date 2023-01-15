@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./nbody 50000000 >>null
-\time -v -o tmp2 wasmedge ./nbody.wasm 50000000  >>null
-\time -v -o tmp3 wasmedge ./nbody.so 50000000  >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./nbody.wasm 50000000  >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./nbody.so 50000000  >>null
 \time -v -o tmp4 wasmer ./nbody.out  50000000  >>null
 \time -v -o tmp5 wasmtime ./nbody.out 50000000  >>null
 \time -v -o tmp6 wasmer run ./nbody_wasmer_aot  50000000  >>null

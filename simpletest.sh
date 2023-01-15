@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./simple 5000 >>null
-\time -v -o tmp2 wasmedge ./simple.so 5000 >>null
-\time -v -o tmp3 wasmedge ./simple.wasm 5000 >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./simple.so 5000 >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./simple.wasm 5000 >>null
 \time -v -o tmp4 wasmer ./simple.out 5000 >>null
 \time -v -o tmp5 wasmtime ./simple.out 5000 >>null
 \time -v -o tmp6 wasmer run ./simple_wasmer_aot 5000 >>null

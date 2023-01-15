@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./fasta 25000000 >>null
-\time -v -o tmp2 wasmedge ./fasta.so 25000000 >>null
-\time -v -o tmp3 wasmedge ./fasta.wasm 25000000 >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./fasta.so 25000000 >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./fasta.wasm 25000000 >>null
 \time -v -o tmp4 wasmer ./fasta.out 25000000 >>null
 \time -v -o tmp5 wasmtime ./fasta.out 25000000 >>null
 \time -v -o tmp6 wasmer run ./fasta_wasmer_aot 25000000 >>null

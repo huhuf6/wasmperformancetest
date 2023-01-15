@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./binarytree 20 >>null
-\time -v -o tmp2 wasmedge ./biwasm.so 20 >>null
-\time -v -o tmp3 wasmedge ./biwasm.wasm 20 >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./biwasm.so 20 >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./biwasm.wasm 20 >>null
 \time -v -o tmp4 wasmer ./biwasm.out 20 >>null
 \time -v -o tmp5 wasmtime ./biwasm.out 20 >>null
 \time -v -o tmp6 wasmer run ./biwasmer.aot 20 >>null

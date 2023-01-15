@@ -1,7 +1,7 @@
 #!/bin/sh
 \time -v -o tmp1 ./spectralnorm 2500 >>null
-\time -v -o tmp2 wasmedge ./spectralnorm.so 2500 >>null
-\time -v -o tmp3 wasmedge ./spectralnorm.wasm 2500 >>null
+\time -v -o tmp2 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./spectralnorm.so 2500 >>null
+\time -v -o tmp3 ./WasmEdge-0.11.2-Linux/bin/wasmedge ./spectralnorm.wasm 2500 >>null
 \time -v -o tmp4 wasmer ./spectralnorm.out 2500 >>null
 \time -v -o tmp5 wasmtime ./spectralnorm.out 2500 >>null
 \time -v -o tmp6 wasmer run ./spectralnorm_wasmer_aot 2500 >>null
